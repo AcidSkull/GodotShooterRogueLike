@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Weapons/Weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Rifle.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sounds/rifle-shot.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sounds/rifle-reload.mp3" type="AudioStream" id=4]
+
+[node name="Weapon" instance=ExtResource( 1 )]
+MAX_AMMO = 80
+
+[node name="EndOfGun" parent="." index="0"]
+position = Vector2( 38, 0 )
+
+[node name="GunDirection" parent="." index="1"]
+position = Vector2( 40, 0 )
+
+[node name="GunCooldown" parent="." index="2"]
+wait_time = 0.2
+
+[node name="MuzzleFlash" parent="." index="3"]
+position = Vector2( 41, 0 )
+
+[node name="WeaponSprite" parent="." index="4"]
+texture = ExtResource( 2 )
+
+[node name="ShotSound" parent="." index="5"]
+stream = ExtResource( 3 )
+
+[node name="ReloadSound" parent="." index="6"]
+stream = ExtResource( 4 )
