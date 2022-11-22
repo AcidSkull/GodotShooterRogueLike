@@ -11,5 +11,5 @@ dest_files=[ "res://.import/rifle-reload.mp3-7527ecad4d6a5c8534d1ec9105f6940a.mp
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

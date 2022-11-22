@@ -32,12 +32,16 @@ func shoot() -> void:
 		GunCooldown.start()
 		Animation.play("muzzle_flash")
 		
-		ShotSound.play()
+		if !ShotSound.playing:
+			ShotSound.play()
 		
 		ammo -= ammo_per_shoot
 		if ammo <= 0:
 			emit_signal("out_of_ammo")
 
 func reload() -> void:
+	if !ReloadSound.playing:
+		ReloadSound.play()
+	
 #	Animation.play("reload")
 	ammo = MAX_AMMO
